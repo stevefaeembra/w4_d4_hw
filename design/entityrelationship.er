@@ -7,6 +7,7 @@ name
 [commitments]
 id
 account_id
+vendor_id
 amount
 day_in_month
 
