@@ -1,0 +1,26 @@
+# Entities
+
+
+[transactions]
+id
+timestamp
+amount
+vendor_id
+
+[vendors]
+id
+name
+
+[classifications]
+id
+transaction_id
+tag_id
+
+[categories]
+id
+name
+
+# Relationships
+transactions 1--* classifications
+classifications *--1 categories
+transactions *--1 vendors
