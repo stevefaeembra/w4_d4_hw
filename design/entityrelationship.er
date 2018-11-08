@@ -1,11 +1,21 @@
 # Entities
 
+[accounts]
+id
+name
+
+[commitments]
+id
+account_id
+amount
+day_in_month
 
 [transactions]
 id
 timestamp
 amount
 vendor_id
+account_id
 
 [vendors]
 id
@@ -13,8 +23,8 @@ name
 
 [classifications]
 id
-transaction_id
-tag_id
+transactions_id
+categories_id
 
 [categories]
 id
@@ -24,3 +34,6 @@ name
 transactions 1--* classifications
 classifications *--1 categories
 transactions *--1 vendors
+accounts 1--* commitments
+accounts 1--* transactions
+commitments 1--1 vendors
