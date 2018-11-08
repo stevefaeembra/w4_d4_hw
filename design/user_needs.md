@@ -26,7 +26,7 @@
   I can put the saved money into my war fund
 
 -----
-*** Need 3.1 ***
+***Need 3.1***
 
 **As**
 
@@ -42,7 +42,7 @@ Know when there are likely to be times when my balance falls suddenly
 
 -----
 
-*** Need 3.2 ***
+***Need 3.2***
 
 **As**
 
@@ -72,7 +72,7 @@ tag my transactions with different categories which make sense to me
 can get a breakdown of how I'm really spending my money
 
 -----
-*** Need 5 ***
+***Need 5***
 
 **As**
 
