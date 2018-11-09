@@ -9,6 +9,7 @@ id
 account_id
 name
 amount
+regular
 day_in_month
 
 [commitments]
