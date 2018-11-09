@@ -30,7 +30,15 @@ html {
   grid-template-columns: 1fr;
   align-items: center;
   grid-template-rows: 2rem;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+input.btn--submit {
+  background-color: green;
+  border-radius: 100%;
+  padding: 1rem;
 }
 
 .strip li {
@@ -48,7 +56,12 @@ html {
   grid-template-columns: 1fr 2fr 4fr 1fr;
 }
 
-.commit {
+label, input {
+  display: block;
+  font-size: 2rem;
+}
+
+.commit, .incomings {
   border: 1px solid black;
   font-size: 1.5 rem;
   font-weight: bold;
