@@ -72,15 +72,16 @@ order by
 with i as (
   -- incomes
   select
-    c.day_in_month as dom,
+    i.day_in_month as dom,
     'Income' as type,
-    c.name as "name", -- name is reserved
+    i.id as id,
+    i.name as "name", -- name is reserved
     null as vendor,
-    c.amount
+    i.amount
   from
     accounts a
-    left join incomes c
-    on a.id = c.account_id
+    left join incomes i
+    on a.id = i.account_id
   where
     a.id = 1
   order by
@@ -91,6 +92,7 @@ c as (
   select
     c.day_in_month as dom,
     'Commitment' as type,
+    c.id as id,
     c.name as "name", -- name is reserved
     v.name as vendor,
     c.amount
@@ -108,8 +110,9 @@ c as (
 t as (
   -- transactions
   select
-    t.day_in_month as dom,
+  	t.day_in_month as dom,
     'Transaction' as type,
+    t.id as id,
     t.notes as "name", -- name is reserved
     v.name as vendor,
     t.amount
