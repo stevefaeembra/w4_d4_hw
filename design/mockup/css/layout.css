@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Avenir,sans-serif;
+  font-size: 16px;
+  background-color: wheat;
+}
+
+.strip {
+  color: white;
+  background-color: black;
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 2rem;
+  font-size: 1.5rem;
+}
+
+.fullwidth {
+  color: white;
+  background-color: black;
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+  align-items: center;
+  grid-template-rows: 2rem;
+  font-size: 1.5rem;
+}
+
+.strip li {
+  display: inline-block;
+  border: 1px dotted black;
+  text-align: center;
+}
+
+.transaction {
+  border: 1px solid black;
+  font-size: 1.5 rem;
+  font-weight: bold;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 2fr 4fr 1fr;
+}
+
+.commit {
+  border: 1px solid black;
+  font-size: 1.5 rem;
+  font-weight: bold;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 2fr 2fr 4fr 1fr;
+}
+
+.amount {
+  text-align: right;
+}
+
+.out {
+  background-color: orange;
+}
+
+.commitment {
+  background-color: red;
+}
+
+.in {
+  background-color: cyan;
+}
