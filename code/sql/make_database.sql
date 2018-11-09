@@ -46,6 +46,7 @@ CREATE TABLE incomes (
 
 CREATE TABLE commitments (
   id SERIAL4 PRIMARY KEY,
+  name TEXT NOT NULL,
   account_id INT4 REFERENCES accounts(id),
   vendor_id INT4 REFERENCES vendors(id),
   amount REAL,
