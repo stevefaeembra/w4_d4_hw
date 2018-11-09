@@ -4,6 +4,13 @@
 id
 name
 
+[incomes]
+id
+account_id
+name
+amount
+day_in_month
+
 [commitments]
 id
 account_id
@@ -13,7 +20,9 @@ day_in_month
 
 [transactions]
 id
-timestamp
+day_in_month
+month
+year
 amount
 vendor_id
 account_id
@@ -36,5 +45,6 @@ transactions 1--* classifications
 classifications *--1 categories
 transactions *--1 vendors
 accounts 1--* commitments
+accounts 1--* incomes
 accounts 1--* transactions
 commitments 1--1 vendors
