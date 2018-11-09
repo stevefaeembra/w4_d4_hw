@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/layout.css">
+  <title>Money Tracker</title>
+</head>
+<body>
+  <header>
+    <div class="fullwidth">
+      Money Tracker
+    </div>
+  </header>
+  <nav>
+    <ul class="strip">
+      <li class="button"></li>
+      <li>Edit Transaction</li>
+      <li class="button">X</li>
+    </ul>
+  </nav>
+  <content>
+    <form action="#">
+      <label for="vendor">Vendor</label>
+      <input id="vendor" type="text" placeholder="Marks and Sparks">
+      <hr>
+      <label for="amount">Amount</label>
+      <input id="amount" type="text" placeholder="100.00">
+      <hr>
+      <label for="tags">Tags</label>
+      <input id="tags" placeholder="Clothing Fun" type="text">
+      <hr>
+      <label for="notes">Notes</label>
+      <input id="notes" placeholder="Socks and undercrackers" type="text">
+      <hr>
+      <input class="btn--submit" type="submit" name="submit" value="Save changes">
+      <input class="btn--delete" type="submit" name="submit" value="Delete">
+    </form>
+  </content>
+</body>
+</html>

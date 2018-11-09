@@ -35,9 +35,22 @@ html {
   padding: 1rem 0;
 }
 
+input.btn--delete {
+  display: inline;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+input[type="radio"] {
+  display: block-inline;
+}
+
 input.btn--submit {
+  display: inline;
   background-color: green;
-  border-radius: 100%;
+  border-radius: 10px;
   padding: 1rem;
 }
 
@@ -56,9 +69,17 @@ input.btn--submit {
   grid-template-columns: 1fr 2fr 4fr 1fr;
 }
 
-label, input {
+label, input[type="text"] {
   display: block;
   font-size: 2rem;
+}
+
+.when-regular {
+  display: none;
+}
+
+#typeChoice2:checked ~ .when-regular {
+  display: block;
 }
 
 .commit, .incomings {
