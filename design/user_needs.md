@@ -143,6 +143,7 @@ a budgeter who receives a predictable salary
 see how much I spend each day compared with what I can afford to spend
 
 -----
+
 ***Need 10***
 
 **As**
@@ -171,6 +172,7 @@ be able to record when transactions happened
 
 can estimate my balance at any time, and see the transactions in order.
 
+-----
 ***Need 12***
 
 **As**
