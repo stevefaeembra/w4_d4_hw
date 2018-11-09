@@ -54,7 +54,7 @@ INSERT INTO commitments (name,account_id,vendor_id,amount,day_in_month) VALUES('
 
 INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (1,7,2017,'Slightly soggy sammich',4.15,7,1);
 
-INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (3,7,2017,'Breakfast Baguette, Yum',2.50,7,1);
+INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (3,7,2017,'Breakfast Baguette, Yum',2.50,10,1);
 
 INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (5,7,2017,'Food shop',12.25,1,1);
 

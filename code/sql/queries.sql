@@ -38,3 +38,100 @@ where
   a.id = 1
 order by
 	dom asc;
+
+-- pretty view of transactions for an account
+-- for a given month and year
+
+select
+  t.day_in_month as dom,
+  t.notes as "name", -- name is reserved
+  v.name as vendor,
+  t.amount
+from
+  accounts a
+  left join transactions t
+    on a.id = t.account_id
+  left join vendors v
+    on t.vendor_id = v.id
+where
+  a.id = 1
+order by
+	dom asc;
+
+-- interleaved view, shows all transactions,
+-- incomes and commitments in time order.
+-- this works PROVIDED we only view one month
+-- worth of stuff at a time, either 1..31 or
+-- a rolling window e.g. 12th to 12th :-)
+-- using a CTE (Common table expression) to make
+-- this more readable and avoid having to use
+-- subqueries. Each of the subqueries has the same
+-- columns so I smoosh them together using UNION
+-- and then sort ascending on day-of-month.
+
+with i as (
+  -- incomes
+  select
+    c.day_in_month as dom,
+    'Income' as type,
+    c.name as "name", -- name is reserved
+    null as vendor,
+    c.amount
+  from
+    accounts a
+    left join incomes c
+    on a.id = c.account_id
+  where
+    a.id = 1
+  order by
+  	dom asc
+),
+c as (
+  -- commitments
+  select
+    c.day_in_month as dom,
+    'Commitment' as type,
+    c.name as "name", -- name is reserved
+    v.name as vendor,
+    c.amount
+  from
+    accounts a
+    left join commitments c
+    on a.id = c.account_id
+    left join vendors v
+    on c.vendor_id = v.id
+  where
+    a.id = 1
+  order by
+  	dom asc
+),
+t as (
+  -- transactions
+  select
+    t.day_in_month as dom,
+    'Transaction' as type,
+    t.notes as "name", -- name is reserved
+    v.name as vendor,
+    t.amount
+  from
+    accounts a
+    left join transactions t
+      on a.id = t.account_id
+    left join vendors v
+      on t.vendor_id = v.id
+  where
+    a.id = 1
+  order by
+  	dom asc
+)
+-- concatenate the 3 tables together.
+-- They have the exactly the same columns
+-- so we can do this :-)
+select
+  * from c
+  union
+  	select * from t
+  	union
+  		select * from i
+ order by
+ 	dom asc;
