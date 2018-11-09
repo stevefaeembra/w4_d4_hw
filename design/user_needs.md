@@ -57,7 +57,7 @@ record my regular commitments (like Council tax, Direct Debits)
 Can see if there are any Direct Debits or other commitments that I no longer need or can shop around for better deals
 
 -----
-*** Need 4 ***
+***Need 4***
 
 **As**
 
