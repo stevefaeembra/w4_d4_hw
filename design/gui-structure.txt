@@ -1,0 +1,96 @@
+
+Key
+[+]         Add button
+[x]         Close button
+[=]         Hamburger Menu
+[i]         Info button
+(field)     field
+(field)[v]  pulldown
+[button]    button
+$fields     value
+(A)(B)      radio button
+...
+blah        vertical rows of blah
+...
+
+Main Transactions List (home page)
+==================================
+
+[+] Transactions [=]      [+] -> new transaction
+...
+[i] $dom $vendor $amount  [i] -> transaction form
+...
+
+Hamburger menu
+==============
+[Transactions]  -> main transactions screen
+[Incomings]     -> incomings
+[Commitments]   -> commitments
+[Quit]
+
+Incomings menu
+==============
+
+[+] Incomings [=]         [+] -> new income form
+...
+[i] $dom $Name +$amount   [i] -> edit income form
+...
+
+Commitments menu
+================
+[+] Commitments [=]       [+] -> new commitment form
+...
+[i] $dom $Name -$amount   [i] -> edit commitment form
+...
+
+New Transaction Form
+====================
+Transaction  [x]
+Vendor : (Vendor)[v]
+Amount : £(Amount)
+Date   : ($today)
+Tags   : (tags)
+[Save][Close]
+
+Edit Transaction Form
+====================
+Transaction  [x]
+Vendor : (Vendor)[v]
+Amount : £(Amount)
+Date   : ($today)
+Tags   : (tags)
+[Save][Close][Delete]
+
+New Income Form
+===============
+Income        [x]
+Name   : (name)
+Amount : £(amount)
+(One-Off)(Regular)
+Day    : (day)[v]
+[Save][Close]
+
+Edit Income Form
+================
+Income        [x]
+Name   : (name)
+Amount : £(amount)
+(One-Off)(Regular)
+Day    : (day)[v]
+[Save][Close][Delete]
+
+New Commitment Form
+===================
+Commitment        [x]
+Name   : (name)
+Amount : £(amount)
+Day    : (day)[v]
+[Save][Close]
+
+Edit Commitment Form
+====================
+Commitment        [x]
+Name   : (name)
+Amount : £(amount)
+Day    : (day)[v]
+[Save][Close][Delete]

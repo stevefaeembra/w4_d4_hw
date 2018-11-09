@@ -170,3 +170,17 @@ be able to record when transactions happened
 **So that I**
 
 can estimate my balance at any time, and see the transactions in order.
+
+***Need 12***
+
+**As**
+
+a budgeter
+
+**I want to**
+
+be able to type text notes against a transaction
+
+**So that I**
+
+can remember what that weird payment was in a month's time when I've forgotten the name of the shop

@@ -23,6 +23,7 @@ id
 day_in_month
 month
 year
+notes
 amount
 vendor_id
 account_id
