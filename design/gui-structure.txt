@@ -16,10 +16,12 @@ blah        vertical rows of blah
 Main Transactions List (home page)
 ==================================
 
+[recent][by tag]
 [+] Transactions [=]      [+] -> new transaction
 ...
-[i] $dom $vendor $amount  [i] -> transaction form
+[i] $dom $vendor $tags -$amount  [i] -> transaction form
 ...
+                        $total
 
 Hamburger menu
 ==============
