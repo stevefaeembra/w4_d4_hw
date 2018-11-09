@@ -60,4 +60,14 @@ INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account
 
 INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (5,7,2017,'Light bulbs and a thermos flask',22.95,13,1);
 
+INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (15,7,2017,'Food and wine',18.00,1,1);
+
+INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (21,7,2017,'Two tins of Stella and a packet of Crisps',5.50,9,1);
+
+INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (15,7,2017,'registered post letter for jury duty grrrr',6.50,8,1);
+
+INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (19,7,2017,'Food shop',36.00,1,1);
+
+INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (15,7,2017,'Lunch at Wagamama',16.00,11,1);
+
 -- lets hook transactions to tags!
