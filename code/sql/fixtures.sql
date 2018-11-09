@@ -27,12 +27,13 @@ INSERT INTO vendors(name) values ('sainsburys');
 INSERT INTO vendors(name) values ('bank'); --4
 INSERT INTO vendors(name) values ('gym'); --5
 INSERT INTO vendors(name) values ('council'); --6
-INSERT INTO vendors(name) values ('marks and spencers');
+INSERT INTO vendors(name) values ('marks and spencers'); --7
 INSERT INTO vendors(name) values ('post office');
 INSERT INTO vendors(name) values ('waitrose');
-INSERT INTO vendors(name) values ('greggs');
+INSERT INTO vendors(name) values ('greggs'); --10
 INSERT INTO vendors(name) values ('wagamama');
 INSERT INTO vendors(name) values ('isa provider');
+INSERT INTO vendors(name) values ('john lewis');
 
 -- sample incomes
 
@@ -46,3 +47,17 @@ INSERT INTO commitments (name,account_id,vendor_id,amount,day_in_month) VALUES('
 INSERT INTO commitments (name,account_id,vendor_id,amount,day_in_month) VALUES('Gym Subs',1,5,35.00,1);
 
 INSERT INTO commitments (name,account_id,vendor_id,amount,day_in_month) VALUES('Council Tax',1,6,112.00,28);
+
+INSERT INTO commitments (name,account_id,vendor_id,amount,day_in_month) VALUES('ISA',1,12,50.00,28);
+
+-- sample transactions
+
+INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (1,7,2017,'Slightly soggy sammich',4.15,7,1);
+
+INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (3,7,2017,'Breakfast Baguette, Yum',2.50,7,1);
+
+INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (5,7,2017,'Food shop',12.25,1,1);
+
+INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (5,7,2017,'Light bulbs and a thermos flask',22.95,13,1);
+
+-- lets hook transactions to tags!
