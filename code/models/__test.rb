@@ -1,6 +1,6 @@
 require_relative('./account')
 require_relative('./vendor')
-
+require_relative('./category')
 
 # this is a quick test to make sure my
 # changes to SqlRunner actually work
@@ -26,3 +26,13 @@ Vendor.all.each do |record|
   p record
 end
 vendor.delete
+
+# categories table
+category = Category.new({"name"=>"Test Category"})
+category.save
+category.name = "Test category, updated"
+category.update
+Category.all.each do |record|
+  p record
+end
+category.delete
