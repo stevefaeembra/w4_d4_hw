@@ -2,6 +2,7 @@ require_relative('./account')
 require_relative('./vendor')
 require_relative('./category')
 require_relative('./commitment')
+require_relative('./income')
 
 # this is a quick test to make sure my
 # changes to SqlRunner actually work
@@ -60,3 +61,25 @@ Commitment.all.each do |record|
   p record
 end
 commitment.delete
+
+# incomes
+income = Income.new({
+    "name" => "Test Income",
+    "account_id" => "1",
+    "amount" => "1500.0",
+    "regular" => "True",
+    "day_in_month" => "17"
+})
+p income
+income.save
+income = Income.find(income.id)
+p income
+income.amount = 1555.55
+income.day_in_month = 19
+income.regular = "False"
+income.update
+income = Income.find(income.id)
+p income
+Income.all.each do |record|
+  p record
+end
