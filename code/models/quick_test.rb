@@ -3,7 +3,7 @@ require_relative('./account')
 # this is a quick test to make sure my
 # changes to SqlRunner actually work
 
-account = Account.new("Second Account")
+account = Account.new({"name"=>"Second Account"})
 account.save
 account.name = "Second Account, updated!"
 account.update
