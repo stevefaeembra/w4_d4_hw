@@ -1,6 +1,7 @@
 require_relative('./account')
 require_relative('./vendor')
 require_relative('./category')
+require_relative('./commitment')
 
 # this is a quick test to make sure my
 # changes to SqlRunner actually work
@@ -36,3 +37,26 @@ Category.all.each do |record|
   p record
 end
 category.delete
+
+# commitements
+
+commitment = Commitment.new({
+    "name" => "Test Commitment",
+    "vendor_id" => 1,
+    "account_id" => 1,
+    "amount" => 50.0,
+    "day_in_month" => 12
+})
+p commitment
+commitment.save
+commitment = Commitment.find(commitment.id)
+p commitment
+commitment.amount = 50.50
+commitment.day_in_month = 2
+commitment.update
+commitment = Commitment.find(commitment.id)
+p commitment
+Commitment.all.each do |record|
+  p record
+end
+commitment.delete
