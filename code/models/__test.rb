@@ -3,6 +3,7 @@ require_relative('./vendor')
 require_relative('./category')
 require_relative('./commitment')
 require_relative('./income')
+require_relative('./transaction')
 
 # this is a quick test to make sure my
 # changes to SqlRunner actually work
@@ -83,3 +84,26 @@ p income
 Income.all.each do |record|
   p record
 end
+income.delete
+
+# transactions
+
+transaction = Transaction.new({
+    "day_in_month" => "31",
+    "month" => "6",
+    "year" => "2017",
+    "notes" => "this is a test - bought stamps",
+    "amount" => "4.50",
+    "account_id" => "1",
+    "vendor_id" => "8"
+})
+transaction.save
+transaction.notes += " (EDITED)"
+transaction.amount = 5.55
+transaction.update
+transaction = Transaction.find(transaction.id)
+p transaction
+Transaction.all.each do |record|
+  p record
+end
+transaction.delete
