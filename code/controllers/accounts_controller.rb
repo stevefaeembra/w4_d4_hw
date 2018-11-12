@@ -20,3 +20,12 @@ post '/accounts' do
   account.save
   redirect to '/accounts'
 end
+
+get '/accounts/:id/delete' do
+  # delete account with a GET?
+  # yeah! let's live dangerously :-)
+  account = Account.find(params[:id])
+  account.delete
+  @accounts = Account.all
+  erb(:accounts)
+end

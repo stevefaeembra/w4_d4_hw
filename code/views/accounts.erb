@@ -6,12 +6,14 @@
   <thead>
     <th>ID</th>
     <th>Name</th>
+    <th></th>
   </thead>
   <tbody>
     <% @accounts.each do |account| %>
       <tr>
         <td><%= account.id %></td>
         <td><%= account.name %></td>
+        <td><a class="delete" href="/accounts/<%= account.id %>/delete">Delete</i></td>
       </tr>
     <% end %>
   </tbody>
