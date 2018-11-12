@@ -138,3 +138,20 @@ select
   		select * from i
  order by
  	dom asc;
+
+-- get tags names and ids for a given transaction
+
+with pick as (
+	select
+		*
+	from
+		classifications c
+	where
+		c.transactions_id = 9
+)
+select
+	k.id,
+	k.name
+from pick c
+	inner join transactions t on t.id = c.transactions_id
+	inner join categories k on k.id = c.categories_id;
