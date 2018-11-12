@@ -71,3 +71,24 @@ INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account
 INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (15,7,2017,'Lunch at Wagamama',16.00,11,1);
 
 -- lets hook transactions to tags!
+-- classifications hook transactions to tags
+-- many to many
+
+INSERT INTO classifications
+(transactions_id, categories_id) VALUES (1,1);
+INSERT INTO classifications
+(transactions_id, categories_id) VALUES (2,1);
+INSERT INTO classifications
+(transactions_id, categories_id) VALUES (3,1);
+INSERT INTO classifications
+(transactions_id, categories_id) VALUES (4,5);
+INSERT INTO classifications
+(transactions_id, categories_id) VALUES (5,1);
+INSERT INTO classifications
+(transactions_id, categories_id) VALUES (6,1);
+INSERT INTO classifications
+(transactions_id, categories_id) VALUES (8,1);
+INSERT INTO classifications
+(transactions_id, categories_id) VALUES (9,1);
+INSERT INTO classifications
+(transactions_id, categories_id) VALUES (9,3);
