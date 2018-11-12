@@ -4,6 +4,7 @@ require_relative('./category')
 require_relative('./commitment')
 require_relative('./income')
 require_relative('./transaction')
+require_relative('./classification')
 
 # this is a quick test to make sure my
 # changes to SqlRunner actually work
@@ -107,3 +108,19 @@ Transaction.all.each do |record|
   p record
 end
 transaction.delete
+
+# classifications
+
+classify = Classification.new({
+  "transactions_id" => "1",
+  "categories_id" => "9"
+})
+classify.save
+classify.categories_id = 8
+classify.update
+transaction = Classification.find(classify.id)
+p classify
+Classification.all.each do |record|
+  p record
+end
+classify.delete
