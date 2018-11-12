@@ -8,3 +8,17 @@ get '/incomes' do
   @incomes = Income.all
   erb(:incomes)
 end
+
+get '/incomes/new' do
+  # show form for new income creation
+  @vendors = Vendor.all
+  @accounts = Account.all
+  erb(:income)
+end
+
+post '/incomes' do
+  # create and save a new Income
+  income = Income.new(params)
+  income.save
+  redirect to '/incomes'
+end
