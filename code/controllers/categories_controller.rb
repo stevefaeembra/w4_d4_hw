@@ -18,5 +18,5 @@ post '/categories' do
   # create and save a new Category
   category = Category.new(params)
   category.save
-  redirect to '/'
+  redirect to '/categories'
 end

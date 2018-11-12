@@ -18,5 +18,5 @@ post '/vendors' do
   # create and save a new Account
   vendor = Vendor.new(params)
   vendor.save
-  redirect to '/'
+  redirect to '/vendors'
 end

@@ -18,5 +18,5 @@ post '/accounts' do
   # create and save a new Account
   account = Account.new(params)
   account.save
-  redirect to '/'
+  redirect to '/accounts'
 end
