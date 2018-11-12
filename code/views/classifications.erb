@@ -1,0 +1,20 @@
+<h1>Classifications</h1>
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Transaction ID</th>
+    <th>Category ID</th>
+  </thead>
+  <tbody>
+    <% @classifications.each do |classification| %>
+      <tr>
+        <td><%= classification.id %></td>
+        <td><%= classification.transactions_id %></td>
+        <td><%= classification.categories_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+
+  </tfoot>
+</table>

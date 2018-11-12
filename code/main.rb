@@ -8,6 +8,7 @@ require_relative('controllers/commitments_controller')
 require_relative('controllers/vendors_controller')
 require_relative('controllers/categories_controller')
 require_relative('controllers/accounts_controller')
+require_relative('controllers/classifications_controller')
 
 get '/' do
   erb( :hello )
