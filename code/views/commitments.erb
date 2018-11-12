@@ -7,7 +7,8 @@
     <th>ID</th>
     <th>Date</th>
     <th>Name</th>
-    <th>Account</th>
+    <th>Account ID</th>
+    <th>Vendor ID</th>
     <th>Amount</th>
   </thead>
   <tbody>
@@ -17,6 +18,7 @@
         <td><%= commitment.day_in_month %></td>
         <td><%= commitment.name %></td>
         <td><%= commitment.account_id %></td>
+        <td><%= commitment.vendor_id %></td>
         <td><%= commitment.amount %></td>
       </tr>
     <% end %>
