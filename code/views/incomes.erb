@@ -1,0 +1,22 @@
+<h1>Incomes</h1>
+<table>
+  <thead>
+    <th>Date</th>
+    <th>Name</th>
+    <th>Account</th>
+    <th>Amount</th>
+  </thead>
+  <tbody>
+    <% @incomes.each do |income| %>
+      <tr>
+        <td><%= income.day_in_month %></td>
+        <td><%= income.name %></td>
+        <td><%= income.account_id %></td>
+        <td><%= income.amount %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+
+  </tfoot>
+</table>
