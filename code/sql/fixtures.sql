@@ -56,7 +56,7 @@ INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account
 
 INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (3,7,2017,'Breakfast Baguette, Yum',2.50,10,1);
 
-INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (5,7,2017,'Food shop',12.25,1,1);
+INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (15,6,2017,'Food shop',12.25,1,1);
 
 INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (5,7,2017,'Light bulbs and a thermos flask',22.95,13,1);
 
@@ -68,7 +68,7 @@ INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account
 
 INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (19,7,2017,'Food shop',36.00,1,1);
 
-INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (15,7,2017,'Lunch at Wagamama',16.00,11,1);
+INSERT INTO transactions (day_in_month,month,year,notes,amount,vendor_id,account_id) VALUES (15,8,2017,'Lunch at Wagamama',16.00,11,1);
 
 -- lets hook transactions to tags!
 -- classifications hook transactions to tags

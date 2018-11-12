@@ -1,8 +1,9 @@
+require('date')
 require_relative('../db/sql_runner')
 
 class Transaction
 
-  attr_reader :id
+  attr_reader :id, :dmy
   attr_accessor :day_in_month, :month, :year, :notes, :amount, :account_id, :vendor_id
 
   def initialize(options)
@@ -10,6 +11,7 @@ class Transaction
     @day_in_month = options['day_in_month'].to_i
     @month = options['month'].to_i
     @year = options['year'].to_i
+    @dmy = Date.new(@year, @month, @day_in_month)
     @notes = options['notes']
     @account_id = options['account_id'].to_i
     @vendor_id = options['vendor_id'].to_i
@@ -25,7 +27,7 @@ class Transaction
   end
 
   def self.all
-    sql = "SELECT * from transactions;"
+    sql = "SELECT * from transactions order by year asc, month asc, day_in_month asc;"
     return SqlRunner.all(sql,[],Transaction)
   end
 
