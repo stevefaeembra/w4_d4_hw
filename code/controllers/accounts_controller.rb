@@ -8,3 +8,15 @@ get '/accounts' do
   @accounts = Account.all
   erb(:accounts)
 end
+
+get '/accounts/new' do
+  # show form for new account creation
+  erb(:account)
+end
+
+post '/accounts' do
+  # create and save a new Account
+  account = Account.new(params)
+  account.save
+  redirect to '/'
+end
