@@ -10,6 +10,7 @@
     <th>Account ID</th>
     <th>Vendor ID</th>
     <th>Amount</th>
+    <th></th>
   </thead>
   <tbody>
     <% @commits.each do |commitment| %>
@@ -19,7 +20,8 @@
         <td><%= commitment.name %></td>
         <td><%= commitment.account_id %></td>
         <td><%= commitment.vendor_id %></td>
-        <td><%= commitment.amount %></td>
+        <td class="amount"><%= commitment.amount %></td>
+        <td><a class="delete" href="/commitments/<%= commitment.id %>/delete">Delete</i></td>
       </tr>
     <% end %>
   </tbody>
