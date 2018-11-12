@@ -7,13 +7,16 @@ class Summary
   # can act as a read-only proxy for
   # Commitments, Transactions, Incomes
 
-  attr_reader :id
+  attr_reader :id, :foo
   attr_accessor :day_in_month, :type, :type_id, :name, :vendor, :amount
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @day_in_month = options['dom'].to_i
-    @type = options['type']
+    @type = options['type'].to_i
+    # my original choice for this
+    # @typename, seemed to be problematic
+    @foo = ['I','C','T'][@type-1]
     @type_id = options['type_id'].to_i
     @name = options['name']
     @vendor = options['vendor']
