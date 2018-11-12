@@ -20,3 +20,10 @@ post '/categories' do
   category.save
   redirect to '/categories'
 end
+
+get '/categories/:id/delete' do
+  category = Category.find(params[:id])
+  category.delete
+  @categories = Category.all
+  erb(:categories)
+end
