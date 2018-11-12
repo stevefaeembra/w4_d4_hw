@@ -61,6 +61,11 @@ a.add {
   font-size: 1.5em;
 }
 
+a.delete {
+  text-decoration: none;
+  color:red;
+}
+
 h2 {
   display: inline-block;
 }

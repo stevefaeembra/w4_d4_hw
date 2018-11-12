@@ -15,8 +15,15 @@ get '/vendors/new' do
 end
 
 post '/vendors' do
-  # create and save a new Account
+  # create and save a new Vendor
   vendor = Vendor.new(params)
   vendor.save
   redirect to '/vendors'
+end
+
+get '/vendors/:id/delete' do
+  vendor = Vendor.find(params[:id])
+  vendor.delete
+  @vendors = Vendor.all
+  erb(:vendors)
 end
