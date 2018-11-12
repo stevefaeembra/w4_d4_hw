@@ -1,6 +1,7 @@
 <h1>Commitments</h1>
 <table>
   <thead>
+    <th>ID</th>
     <th>Date</th>
     <th>Name</th>
     <th>Account</th>
@@ -9,6 +10,7 @@
   <tbody>
     <% @commits.each do |commitment| %>
       <tr>
+        <td><%= commitment.id %></td>
         <td><%= commitment.day_in_month %></td>
         <td><%= commitment.name %></td>
         <td><%= commitment.account_id %></td>

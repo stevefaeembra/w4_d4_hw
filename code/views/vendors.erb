@@ -1,0 +1,18 @@
+<h1>Vendors</h1>
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+  </thead>
+  <tbody>
+    <% @vendors.each do |vendor| %>
+      <tr>
+        <td><%= vendor.id %></td>
+        <td><%= vendor.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+
+  </tfoot>
+</table>

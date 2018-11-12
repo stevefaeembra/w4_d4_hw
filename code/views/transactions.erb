@@ -1,6 +1,7 @@
 <h1>Transactions</h1>
 <table>
   <thead>
+    <th>ID</th>
     <th>Date</th>
     <th>Notes</th>
     <th>Vendor</th>
@@ -10,6 +11,7 @@
   <tbody>
     <% @xactions.each do |xaction| %>
       <tr>
+        <td><%= xaction.id %></td>
         <td><%= xaction.day_in_month %></td>
         <td><%= xaction.notes %></td>
         <td><%= xaction.vendor_id %></td>

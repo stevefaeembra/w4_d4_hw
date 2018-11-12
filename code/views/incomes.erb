@@ -1,6 +1,7 @@
 <h1>Incomes</h1>
 <table>
   <thead>
+    <th>ID</th>
     <th>Date</th>
     <th>Name</th>
     <th>Account</th>
@@ -9,6 +10,7 @@
   <tbody>
     <% @incomes.each do |income| %>
       <tr>
+        <td><%= income.id %></td>
         <td><%= income.day_in_month %></td>
         <td><%= income.name %></td>
         <td><%= income.account_id %></td>
