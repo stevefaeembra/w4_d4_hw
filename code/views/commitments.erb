@@ -1,0 +1,22 @@
+<h1>Commitments</h1>
+<table>
+  <thead>
+    <th>Date</th>
+    <th>Name</th>
+    <th>Account</th>
+    <th>Amount</th>
+  </thead>
+  <tbody>
+    <% @commits.each do |commitment| %>
+      <tr>
+        <td><%= commitment.day_in_month %></td>
+        <td><%= commitment.name %></td>
+        <td><%= commitment.account_id %></td>
+        <td><%= commitment.amount %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+
+  </tfoot>
+</table>
