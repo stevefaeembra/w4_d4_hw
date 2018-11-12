@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     <% @summaries.each do |summary| %>
-      <tr>
+      <tr class="style_<%= summary.foo  %>">
         <td><%= summary.day_in_month %></td>
         <td><%= summary.foo %></td>
         <td><%= summary.name %></td>

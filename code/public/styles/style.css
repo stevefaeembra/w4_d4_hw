@@ -37,3 +37,17 @@ li {
   text-align: right;
   font-family: monospace;
 }
+
+.style_I {
+  color: white;
+  background-color: green;
+}
+
+.style_C {
+  color: white;
+  background-color: orange;
+}
+
+.style_T {
+  background-color: white;
+}
