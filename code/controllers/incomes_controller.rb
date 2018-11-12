@@ -22,3 +22,10 @@ post '/incomes' do
   income.save
   redirect to '/incomes'
 end
+
+get '/incomes/:id/delete' do
+  income = Income.find(params[:id])
+  income.delete
+  @incomes = Income.all
+  erb(:incomes)
+end

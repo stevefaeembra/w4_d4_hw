@@ -9,6 +9,7 @@
     <th>Name</th>
     <th>Account</th>
     <th>Amount</th>
+    <th></th>
   </thead>
   <tbody>
     <% @incomes.each do |income| %>
@@ -18,6 +19,7 @@
         <td><%= income.name %></td>
         <td><%= income.account_id %></td>
         <td class="amount"><%= income.amount %></td>
+        <td><a class="delete" href="/incomes/<%= income.id %>/delete">Delete</i></td>
       </tr>
     <% end %>
   </tbody>
