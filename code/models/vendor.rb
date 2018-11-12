@@ -19,7 +19,7 @@ class Vendor
   end
 
   def self.all
-    sql = "SELECT * from vendors;"
+    sql = "SELECT * from vendors order by lower(name) asc;"
     return SqlRunner.all(sql,[],Vendor)
   end
 

@@ -19,7 +19,7 @@ class Category
   end
 
   def self.all
-    sql = "SELECT * from categories;"
+    sql = "SELECT * from categories order by lower(name) asc;"
     return SqlRunner.all(sql,[],Category)
   end
 

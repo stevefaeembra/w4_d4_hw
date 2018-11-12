@@ -64,6 +64,7 @@ a.add {
 a.delete {
   text-decoration: none;
   color:red;
+  font-weight: bold;
 }
 
 h2 {

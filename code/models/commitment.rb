@@ -23,7 +23,7 @@ class Commitment
   end
 
   def self.all
-    sql = "SELECT * from commitments;"
+    sql = "SELECT * from commitments order by day_in_month asc;"
     return SqlRunner.all(sql,[],Commitment)
   end
 

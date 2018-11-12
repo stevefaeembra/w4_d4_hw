@@ -23,7 +23,7 @@ class Income
   end
 
   def self.all
-    sql = "SELECT * from incomes;"
+    sql = "SELECT * from incomes order by day_in_month asc;"
     return SqlRunner.all(sql,[],Income)
   end
 
