@@ -13,8 +13,8 @@
         <td><%= summary.day_in_month %></td>
         <td><%= summary.foo %></td>
         <td><%= summary.name %></td>
-        <td><%= summary.vendor %></td>
-        <td><%= summary.amount %></td>
+        <td><%= summary.vendor.capitalize if summary.vendor %></td>
+        <td class="amount"><%= "%.2f" % summary.amount %></td>
       </tr>
     <% end %>
   </tbody>
