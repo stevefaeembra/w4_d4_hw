@@ -20,7 +20,7 @@ class Category
 
   def self.all
     sql = "SELECT * from categories;"
-    return SqlRunner.all(sql,Category)
+    return SqlRunner.all(sql,[],Category)
   end
 
   def self.find(id)

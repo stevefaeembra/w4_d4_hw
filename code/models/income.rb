@@ -24,7 +24,7 @@ class Income
 
   def self.all
     sql = "SELECT * from incomes;"
-    return SqlRunner.all(sql,Income)
+    return SqlRunner.all(sql,[],Income)
   end
 
   def self.find(id)

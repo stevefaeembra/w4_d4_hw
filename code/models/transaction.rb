@@ -26,7 +26,7 @@ class Transaction
 
   def self.all
     sql = "SELECT * from transactions;"
-    return SqlRunner.all(sql,Transaction)
+    return SqlRunner.all(sql,[],Transaction)
   end
 
   def self.find(id)

@@ -1,4 +1,5 @@
-require( 'pg' )
+require('pg')
+require('pry')
 
 class SqlRunner
 
@@ -26,9 +27,9 @@ class SqlRunner
     self.run(sql, values)
   end
 
-  def self.all(sql, clazz)
+  def self.all(sql, values, clazz)
     # return a map of objects of type clazz
-    results = self.run(sql)
+    results = self.run(sql, values)
     results.map {|hash| clazz.new(hash)}
   end
 

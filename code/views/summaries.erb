@@ -1,0 +1,24 @@
+<h1>Summaries</h1>
+<table>
+  <thead>
+    <th>Date</th>
+    <th>Type</th>
+    <th>Name/Notes</th>
+    <th>Vendor</th>
+    <th>Amount</th>
+  </thead>
+  <tbody>
+    <% @summaries.each do |summary| %>
+      <tr>
+        <td><%= summary.day_in_month %></td>
+        <td><%= summary.type %></td>
+        <td><%= summary.name %></td>
+        <td><%= summary.vendor %></td>
+        <td><%= summary.amount %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+
+  </tfoot>
+</table>

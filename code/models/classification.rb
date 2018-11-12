@@ -21,7 +21,7 @@ class Classification
 
   def self.all
     sql = "SELECT * from classifications;"
-    return SqlRunner.all(sql,Classification)
+    return SqlRunner.all(sql,[],Classification)
   end
 
   def self.find(id)

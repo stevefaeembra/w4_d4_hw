@@ -20,7 +20,7 @@ class Vendor
 
   def self.all
     sql = "SELECT * from vendors;"
-    return SqlRunner.all(sql,Vendor)
+    return SqlRunner.all(sql,[],Vendor)
   end
 
   def self.find(id)

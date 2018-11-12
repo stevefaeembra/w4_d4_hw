@@ -36,7 +36,7 @@ CREATE TABLE incomes (
   name TEXT,
   amount REAL,
   regular BOOLEAN,
-  day_in_month SMALLINT -- optional
+  day_in_month INT4 -- optional
 );
 
 -- commitments
@@ -50,16 +50,16 @@ CREATE TABLE commitments (
   account_id INT4 REFERENCES accounts(id),
   vendor_id INT4 REFERENCES vendors(id),
   amount REAL,
-  day_in_month SMALLINT
+  day_in_month INT4
 );
 
 -- transactions, represent a discretionary spend
 
 CREATE TABLE transactions (
   id SERIAL4 PRIMARY KEY,
-  day_in_month SMALLINT,
-  month SMALLINT,
-  year SMALLINT,
+  day_in_month INT4,
+  month INT4,
+  year INT4,
   notes TEXT,
   amount REAL,
   vendor_id INT4 REFERENCES vendors(id),

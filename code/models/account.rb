@@ -20,7 +20,7 @@ class Account
 
   def self.all
     sql = "SELECT * from accounts;"
-    return SqlRunner.all(sql,Account)
+    return SqlRunner.all(sql,[],Account)
   end
 
   def self.find(id)

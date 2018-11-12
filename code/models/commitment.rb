@@ -24,7 +24,7 @@ class Commitment
 
   def self.all
     sql = "SELECT * from commitments;"
-    return SqlRunner.all(sql,Commitment)
+    return SqlRunner.all(sql,[],Commitment)
   end
 
   def self.find(id)
