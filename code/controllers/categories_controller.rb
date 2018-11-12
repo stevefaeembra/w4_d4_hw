@@ -8,3 +8,15 @@ get '/categories' do
   @categories = Category.all
   erb(:categories)
 end
+
+get '/categories/new' do
+  # show form for new category creation
+  erb(:category)
+end
+
+post '/categories' do
+  # create and save a new Category
+  category = Category.new(params)
+  category.save
+  redirect to '/'
+end
