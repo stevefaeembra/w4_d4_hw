@@ -12,7 +12,7 @@
     <% @vendors.each do |vendor| %>
       <tr>
         <td><%= vendor.id %></td>
-        <td><%= vendor.name %></td>
+        <td><a href="/vendors/<%= vendor.id %>/edit"><%= vendor.name %></a></td>
         <td><a class="delete" href="/vendors/<%= vendor.id %>/delete"><img class="icon" src="/images/throw-to-paper-bin.svg"></i></a></td>
       </tr>
     <% end %>

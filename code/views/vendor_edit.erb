@@ -1,0 +1,8 @@
+<h1>Edit Vendor</h1>
+<hr>
+<form action="/vendors/<%= @vendor.id %>" method="post">
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text" value="<%= @vendor.name %>"></input>
+  <hr>
+  <input type="submit" value="Submit">
+</form>
