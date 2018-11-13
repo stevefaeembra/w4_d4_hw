@@ -1,0 +1,34 @@
+<h1>Edit Transaction</h1>
+<hr>
+<form action="/transactions/<%= @transaction.id %>" method="post">
+  <label for="notes">Notes</label>
+  <input id="notes" name="notes" type="text" value="<%= @transaction.notes %>"></input>
+  <hr>
+  <label for="amount">Notes</label>
+  £<input id="amount" name="amount" type="text" value="<%= @transaction.amount %>"></input>
+  <hr>
+  <hr>
+  <label for="vendor">Vendor</label>
+  <select class="vendor" name="vendor_id">
+    <% @vendors.each do |vendor| %>
+      <option value="<%= vendor.id %>" <%= "selected" if vendor.id == @transaction.vendor_id %>
+        >
+        <%= vendor.name %>
+      </option>
+    <% end %>
+  </select>
+  <hr>
+  <label for="account">Account</label>
+  <select class="account" name="account_id">
+    <% @accounts.each do |account| %>
+      <option value="<%= account.id %>" <%= "selected" if account.id == @transaction.account_id %> >
+        <%= account.name %>
+      </option>
+    <% end %>
+  </select>
+  <hr>
+  <label for="day">Date</label>
+  <input id="day" type="number" name="day_in_month" value="<%= @transaction.day_in_month %>" min="1" max="31">/ <input id="month" type="number" name="month" value="<%= @transaction.month %>" min="1" max="12"> / <input id="year" type="number" name="year" value="<%= @transaction.year %>" min="2018" max="2020">
+  <hr>
+  <input type="submit" value="Submit">
+</form>

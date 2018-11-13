@@ -14,7 +14,7 @@
     <% @xactions.each do |xaction| %>
       <tr>
         <td><%= xaction.dmy %></td>
-        <td><%= xaction.notes %></td>
+        <td><a href="/transactions/<%= xaction.id %>/edit"><%= xaction.notes %></a></td>
         <td><%= xaction.vendor_id %></td>
         <td><%= xaction.account_id %></td>
         <td class="amount"><%= xaction.amount %></td>

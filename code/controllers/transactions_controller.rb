@@ -29,6 +29,21 @@ post '/transactions' do
   redirect to '/summary'
 end
 
+get '/transactions/:id/edit' do
+  # show form for transaction editing
+  @vendors = Vendor.all
+  @accounts = Account.all
+  @transaction = Transaction.find(params[:id])
+  erb(:transaction_edit)
+end
+
+post '/transactions/:id' do
+  # update an existing transaction
+  transaction = Transaction.new(params)
+  transaction.update
+  redirect to '/summary'
+end
+
 get '/incomes/:id/delete' do
   income = Income.find(params[:id])
   income.delete
