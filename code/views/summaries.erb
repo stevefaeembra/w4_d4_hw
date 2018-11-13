@@ -6,15 +6,17 @@
     <th>Name/Notes</th>
     <th>Vendor</th>
     <th>Amount</th>
+    <th></th>
   </thead>
   <tbody>
     <% @summaries.each do |summary| %>
       <tr class="style_<%= summary.foo  %>">
         <td><%= summary.day_in_month %></td>
         <td><%= summary.foo %></td>
-        <td><%= summary.name %></td>
+        <td><a href="/edit_router/<%= summary.id %>/<%= summary.foo %>"><%= summary.name %></a></td>
         <td><%= summary.vendor.capitalize if summary.vendor %></td>
         <td class="amount"><%= "%.2f" % summary.amount %></td>
+        <td><a class="delete" href="/delete_router/<%= summary.id %>/<%= summary.foo %>"><img class="icon" src="/images/throw-to-paper-bin.svg" ></i></a></td>
       </tr>
     <% end %>
   </tbody>

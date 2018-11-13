@@ -44,9 +44,9 @@ post '/transactions/:id' do
   redirect to '/summary'
 end
 
-get '/incomes/:id/delete' do
-  income = Income.find(params[:id])
-  income.delete
+get '/transactions/:id/delete' do
+  transaction = Transaction.find(params[:id])
+  transaction.delete
   @incomes = Income.all
-  erb(:incomes)
+  erb(:transactions)
 end
