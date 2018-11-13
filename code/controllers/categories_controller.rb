@@ -21,6 +21,19 @@ post '/categories' do
   redirect to '/categories'
 end
 
+get '/categories/:id/edit' do
+  # show form for account editing
+  @category =Category.find(params[:id])
+  erb(:category_edit)
+end
+
+post '/categories/:id' do
+  # update an existing category
+  category = Category.new(params)
+  category.update
+  redirect to '/categories'
+end
+
 get '/categories/:id/delete' do
   category = Category.find(params[:id])
   category.delete

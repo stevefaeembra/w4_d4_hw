@@ -1,0 +1,8 @@
+<h1>Edit Category</h1>
+<hr>
+<form action="/categories/<%= @category.id %>" method="post">
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text" value="<%= @category.name %>"></input>
+  <hr>
+  <input type="submit" value="Submit">
+</form>

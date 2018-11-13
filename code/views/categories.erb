@@ -12,7 +12,7 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.id %></td>
-        <td><%= category.name %></td>
+        <td><a href="/categories/<%= category.id %>/edit"><%= category.name %></a></td>
         <td><a class="delete" href="/categories/<%= category.id %>/delete"><img class="icon" src="/images/throw-to-paper-bin.svg"></i></a></td>
       </tr>
     <% end %>
