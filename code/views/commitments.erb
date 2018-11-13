@@ -6,9 +6,9 @@
 <div class="table">
   <div class="thead">
     <div class="th">ID</div>
-    <div class="th">Date</div>
-    <div class="th">Name</div>
-    <div class="th">Amount</div>
+    <div class="th">Day</div>
+    <div class="th50">Name</div>
+    <div class="th20">Amount</div>
     <div class="th"></div>
   </div>
   <div class="tbody">
@@ -16,8 +16,8 @@
       <div class="tr">
         <div class="td"><%= commitment.id %></div>
         <div class="td"><%= commitment.day_in_month %></div>
-        <div class="td"><a href="/commitments/<%= commitment.id %>/edit"><%= commitment.name %></a></div>
-        <div class="td" class="amount"><%= commitment.amount %></div>
+        <div class="td50"><a href="/commitments/<%= commitment.id %>/edit"><%= commitment.name %></a></div>
+        <div class="td20" class="amount"><%= commitment.amount %></div>
         <div class="td"><a class="delete" href="/commitments/<%= commitment.id %>/delete"><img class="icon" src="/images/throw-to-paper-bin.svg"></i></a></div>
       </div>
     <% end %>

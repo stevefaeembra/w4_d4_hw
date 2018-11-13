@@ -120,7 +120,7 @@ by sliding the content down
   z-index: 100;
 } */
 
-/** flex container for vertical list. based on HTML tables but implemented using CSS Flex layout. Based on a grid of 20% **/
+/** flex container for vertical list. based on HTML tables but implemented using CSS Flex layout. Based on a grid of 10% by default **/
 
 .table, .tbody, .tfoot {
   display: flex;
@@ -135,14 +135,21 @@ by sliding the content down
   margin: 1px 0;
 }
 
-.th,.th80 {
+.th,.th90,.th80,.th70,.th60,.th50,.th40,.th30,.th20 {
   font-weight: bolder;
 }
 
 .td, .th {
   padding: .5rem 0;
   text-align: left;
-  flex: 20%;
+  flex: 10%;
+  border: 1px dotted red;
+}
+
+.td90, .th90 {
+  padding: .5rem 0;
+  text-align: left;
+  flex: 90%;
   border: 1px dotted red;
 }
 
@@ -153,9 +160,44 @@ by sliding the content down
   border: 1px dotted red;
 }
 
+.td70, .th70 {
+  padding: .5rem 0;
+  text-align: left;
+  flex: 70%;
+  border: 1px dotted red;
+}
+
 .td60, .th60 {
   padding: .5rem 0;
   text-align: left;
   flex: 60%;
+  border: 1px dotted red;
+}
+
+.td50, .th50 {
+  padding: .5rem 0;
+  text-align: left;
+  flex: 50%;
+  border: 1px dotted red;
+}
+
+.td40, .th40 {
+  padding: .5rem 0;
+  text-align: left;
+  flex: 40%;
+  border: 1px dotted red;
+}
+
+.td30, .th30 {
+  padding: .5rem 0;
+  text-align: left;
+  flex: 30%;
+  border: 1px dotted red;
+}
+
+.td20, .th20 {
+  padding: .5rem 0;
+  text-align: left;
+  flex: 20%;
   border: 1px dotted red;
 }
