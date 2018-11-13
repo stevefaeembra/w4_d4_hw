@@ -12,7 +12,7 @@
     <% @accounts.each do |account| %>
       <tr>
         <td><%= account.id %></td>
-        <td><%= account.name %></td>
+        <td><a href="/accounts/<%= account.id %>/edit"><%= account.name %></a></td>
         <td><a class="delete" href="/accounts/<%= account.id %>/delete"><img class="icon" src="/images/throw-to-paper-bin.svg" ></i></a></td>
       </tr>
     <% end %>

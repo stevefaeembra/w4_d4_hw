@@ -14,12 +14,25 @@ get '/accounts/new' do
   erb(:account)
 end
 
+get '/accounts/:id/edit' do
+  # show form for account editing
+  @account = Account.find(params[:id])
+  erb(:account_edit)
+end
+
 post '/accounts' do
   # create and save a new Account
   account = Account.new(params)
   account.save
   redirect to '/accounts'
 end
+
+post '/accounts/:id' do
+  account = Account.new(params)
+  account.update
+  redirect to '/accounts'
+end
+
 
 get '/accounts/:id/delete' do
   # delete account with a GET?
