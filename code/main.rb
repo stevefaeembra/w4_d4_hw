@@ -10,7 +10,9 @@ require_relative('controllers/categories_controller')
 require_relative('controllers/accounts_controller')
 require_relative('controllers/classifications_controller')
 require_relative('controllers/summary_controller')
+require_relative('./models/summary')
 
 get '/' do
-  erb( :hello )
+  @summaries = Summary.all
+  erb( :summaries )
 end
