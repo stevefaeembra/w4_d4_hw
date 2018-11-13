@@ -103,9 +103,50 @@ a.delete {
   font-weight: bold;
 }
 
-
-
 img.icon {
   width: 24px;
   height: 24px;
+}
+
+/**
+we reveal the menu
+by sliding the content down
+*/
+
+/* content {
+  background-color: whitesmoke;
+  position: absolute;
+  top: 5rem;
+  z-index: 100;
+} */
+
+/** flex container for vertical list. based on HTML tables but implemented using CSS Flex layout. Based on a grid of 20% **/
+
+.table, .tbody, .tfoot {
+  display: flex;
+  flex-direction: column;
+}
+
+.tr, .thead {
+  background-color: wheat;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  margin: 1px 0;
+}
+
+.th,.th80 {
+  font-weight: bolder;
+}
+
+.td, .th {
+  padding: .5rem;
+  text-align: left;
+  flex: 20%;
+}
+
+.td80, .th80 {
+  padding: .5rem;
+  text-align: left;
+  flex: 80%;
 }
