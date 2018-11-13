@@ -140,13 +140,22 @@ by sliding the content down
 }
 
 .td, .th {
-  padding: .5rem;
+  padding: .5rem 0;
   text-align: left;
   flex: 20%;
+  border: 1px dotted red;
 }
 
 .td80, .th80 {
-  padding: .5rem;
+  padding: .5rem 0;
   text-align: left;
   flex: 80%;
+  border: 1px dotted red;
+}
+
+.td60, .th60 {
+  padding: .5rem 0;
+  text-align: left;
+  flex: 60%;
+  border: 1px dotted red;
 }
