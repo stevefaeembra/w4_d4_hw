@@ -47,6 +47,6 @@ end
 get '/transactions/:id/delete' do
   transaction = Transaction.find(params[:id])
   transaction.delete
-  @incomes = Income.all
-  erb(:transactions)
+  @summaries = Summary.all
+  erb(:summaries)
 end

@@ -43,6 +43,6 @@ end
 get '/commitments/:id/delete' do
   commitment = Commitment.find(params[:id])
   commitment.delete
-  @commits = Commitment.all
-  erb(:commitments)
+  @summaries = Summary.all
+  erb(:summaries)
 end

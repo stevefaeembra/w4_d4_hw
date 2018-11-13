@@ -32,7 +32,7 @@ CREATE TABLE categories (
 
 CREATE TABLE incomes (
   id SERIAL4 PRIMARY KEY,
-  account_id INT4 REFERENCES accounts(id),
+  account_id INT4 REFERENCES accounts(id) ON DELETE CASCADE,
   name TEXT,
   amount REAL,
   regular BOOLEAN,
@@ -47,8 +47,8 @@ CREATE TABLE incomes (
 CREATE TABLE commitments (
   id SERIAL4 PRIMARY KEY,
   name TEXT NOT NULL,
-  account_id INT4 REFERENCES accounts(id),
-  vendor_id INT4 REFERENCES vendors(id),
+  account_id INT4 REFERENCES accounts(id) ON DELETE CASCADE,
+  vendor_id INT4 REFERENCES vendors(id) ON DELETE CASCADE,
   amount REAL,
   day_in_month INT4
 );
@@ -62,14 +62,14 @@ CREATE TABLE transactions (
   year INT4,
   notes TEXT,
   amount REAL,
-  vendor_id INT4 REFERENCES vendors(id),
-  account_id INT4 REFERENCES accounts(id)
+  vendor_id INT4 REFERENCES vendors(id) ON DELETE CASCADE,
+  account_id INT4 REFERENCES  accounts(id) ON DELETE CASCADE
 );
 
 -- finally, any bridging tables
 
 CREATE TABLE classifications (
   id SERIAL4 PRIMARY KEY,
-  transactions_id INT4 REFERENCES transactions(id),
-  categories_id INT4 REFERENCES categories(id)
+  transactions_id INT4 REFERENCES transactions(id) ON DELETE CASCADE,
+  categories_id INT4 REFERENCES categories(id) ON DELETE CASCADE
 );

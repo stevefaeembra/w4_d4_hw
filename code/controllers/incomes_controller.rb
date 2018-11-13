@@ -20,7 +20,7 @@ post '/incomes' do
   # create and save a new Income
   income = Income.new(params)
   income.save
-  redirect to '/incomes'
+  redirect to '/summary'
 end
 
 get '/incomes/:id/edit' do
@@ -35,12 +35,12 @@ post '/incomes/:id' do
   # update an existing income
   income = Income.new(params)
   income.update
-  redirect to '/incomes'
+  redirect to '/summary'
 end
 
 get '/incomes/:id/delete' do
   income = Income.find(params[:id])
   income.delete
-  @incomes = Income.all
-  erb(:incomes)
+  @summaries = Summary.all
+  erb(:summaries)
 end
