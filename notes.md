@@ -12,8 +12,14 @@
 **Planning and Execution**
 
 - found doing a day and a half of **UX planning really helped me** know what I was working towards.
-- **did things from back to front, one layer at a time**, rather than doing each table separately through all layers in turn
+- **Did things from back to front, one layer at a time**, rather than doing each table separately through all layers in turn
 - **I worked in order of similarity**, e.g. once I did table A, I did the most similar other tables B and C. Meant I could copy code from other classes while it's still fresh.
 - **I used SQL to seed the tables**. This meant I could be more productive from the start as I had ready made data WITHOUT needing to code ;-)
 
 **Lessons Learnt**
+
+**Stuff I'm happy with**
+
+- used a SQL union and CTE to merge/interleave three separate tables into one summary table. This needed a read-only object to relect the content of a row.
+
+- used an extra controller for this, which also uses the class of each row to redirect to the appropriate endpoint
