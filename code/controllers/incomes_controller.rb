@@ -23,6 +23,21 @@ post '/incomes' do
   redirect to '/incomes'
 end
 
+get '/incomes/:id/edit' do
+  # show form for income editing
+  @vendors = Vendor.all
+  @accounts = Account.all
+  @income = Income.find(params[:id])
+  erb(:income_edit)
+end
+
+post '/incomes/:id' do
+  # update an existing income
+  income = Income.new(params)
+  income.update
+  redirect to '/incomes'
+end
+
 get '/incomes/:id/delete' do
   income = Income.find(params[:id])
   income.delete

@@ -1,0 +1,28 @@
+<h1>Edit Income</h1>
+<hr>
+<form action="/incomes/<%= @income.id %>" method="post">
+  <label for="name">Name</label>
+  <input id="name" name="name" type="text" value="<%= @income.name %>"></input>
+  <hr>
+  <label for="account">Account</label>
+  <select class="account" name="account_id">
+    <% @accounts.each do |account| %>
+      <option value="<%= account.id %>" <%= "selected" if account.id == @income.account_id %>>
+        <%= account.name %>
+      </option>
+    <% end %>
+  </select>
+  <hr>
+  <hr>
+  <label for="amount">Amount</label>
+  £<input type="text" id="amount" name="amount" value="<%= @income.amount %>"></input>
+  <hr>
+  <label for="regular">Regular?</label><br>
+  <input type="radio" id="regular" name="regular" value="F" <%= "checked" if @income.regular %>>One-off<br>
+  <input id="regular" type="radio" name="regular" value="T" checked <%= "checked" if !@income.regular %>>Regular<br>
+  <hr>
+  <label for="day">Day of Month</label>
+  <input id="day" type="number" name="day_in_month" value="<%= @income.day_in_month %>" min="1" max="31">
+  <hr>
+  <input type="submit" value="Submit">
+</form>

@@ -16,7 +16,7 @@
       <tr>
         <td><%= income.id %></td>
         <td><%= income.day_in_month %></td>
-        <td><%= income.name %></td>
+        <td><a href="/incomes/<%= income.id %>/edit"><%= income.name %></a></td>
         <td><%= income.account_id %></td>
         <td class="amount"><%= income.amount %></td>
         <td><a class="delete" href="/incomes/<%= income.id %>/delete"><img class="icon" src="/images/throw-to-paper-bin.svg"></i></a></td>
