@@ -37,7 +37,7 @@ post '/commitments/:id' do
   # update an existing commitment
   commitment = Commitment.new(params)
   commitment.update
-  redirect to '/commitments'
+  redirect to '/summary'
 end
 
 get '/commitments/:id/delete' do
