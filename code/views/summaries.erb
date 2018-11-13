@@ -6,22 +6,20 @@
 <div class="table">
   <div class="thead">
     <div class="th">Date</div>
-    <div class="th">Type</div>
     <div class="th60">Info</div>
-    <div class="th">Amount</div>
+    <div class="th20">Amount</div>
     <div class="th"></div>
   </div>
   <div class="tbody">
     <% @summaries.each do |summary| %>
       <div class="tr style_<%= summary.foo  %>">
         <div class="td"><%= summary.day_in_month %></div>
-        <div class="td"><%= summary.foo %></div>
         <div class="td60">
           <div class=""><a href="/edit_router/<%= summary.id %>/<%= summary.foo %>"><%= summary.name %></a>
           </div>
-          <div class="td20"><%= summary.vendor.capitalize if summary.vendor %></div>
+          <div class="td60"><%= summary.vendor.capitalize if summary.vendor %></div>
         </div>
-        <div class="td amount"><%= "%.2f" % summary.amount %></td></div>
+        <div class="td20 amount"><%= "%.2f" % summary.amount %></td></div>
         <div class="td"><a class="delete" href="/delete_router/<%= summary.id %>/<%= summary.foo %>"><img class="icon" src="/images/throw-to-paper-bin.svg" ></i></a></div>
       </div>
     </div>

@@ -13,9 +13,8 @@
     <% end %>
   </select>
   <hr>
-  <hr>
-  <label for="amount">Amount</label>
-  £<input type="text" id="amount" name="amount" value="<%= @income.amount %>"></input>
+  <label for="amount">Amount, in £</label>
+  <input type="text" id="amount" name="amount" value="<%= @income.amount %>"></input>
   <hr>
   <label for="regular">Regular?</label><br>
   <input type="radio" id="regular" name="regular" value="F" <%= "checked" if @income.regular %>>One-off<br>

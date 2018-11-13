@@ -141,14 +141,27 @@ img.icon {
 
 }
 
+.thead {
+  background-color: pink;
+  font-size: 6vw;
+  font-weight: bold;
+}
+
 .th,.th90,.th80,.th70,.th60,.th50,.th40,.th30,.th20 {
   font-weight: bolder;
+
+}
+
+.th {
+  font-size: 4vw;
+  font-weight: bold;
 }
 
 .td, .th {
   padding: .5rem .25rem;
   text-align: left;
   flex: 10%;
+
   background-colour: white;
 }
 
