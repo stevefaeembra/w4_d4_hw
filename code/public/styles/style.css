@@ -9,7 +9,7 @@
 html {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
-  background-color: whitesmoke;
+
 }
 
 nav.header {
@@ -60,7 +60,7 @@ h2 {
   display: inline-block;
 }
 
-table {
+/* table {
   border: 1px solid black;
 }
 
@@ -75,7 +75,7 @@ th {
 
 th,td {
   padding: 5px;
-}
+} */
 
 ul {
   list-style: none;
@@ -147,6 +147,7 @@ img.icon {
   padding: .5rem .25rem;
   text-align: left;
   flex: 10%;
+  background-colour: white;
 }
 
 .td90, .th90 {
