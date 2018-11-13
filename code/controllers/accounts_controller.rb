@@ -28,6 +28,7 @@ post '/accounts' do
 end
 
 post '/accounts/:id' do
+  # update an existing account
   account = Account.new(params)
   account.update
   redirect to '/accounts'

@@ -17,7 +17,7 @@
       <tr>
         <td><%= commitment.id %></td>
         <td><%= commitment.day_in_month %></td>
-        <td><%= commitment.name %></td>
+        <td><a href="/commitments/<%= commitment.id %>/edit"><%= commitment.name %></a></td>
         <td><%= commitment.account_id %></td>
         <td><%= commitment.vendor_id %></td>
         <td class="amount"><%= commitment.amount %></td>

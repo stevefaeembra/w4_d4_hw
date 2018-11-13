@@ -25,6 +25,21 @@ post '/commitments' do
   redirect to '/commitments'
 end
 
+get '/commitments/:id/edit' do
+  # show form for commitment editing
+  @vendors = Vendor.all
+  @accounts = Account.all
+  @commitment = Commitment.find(params[:id])
+  erb(:commitment_edit)
+end
+
+post '/commitments/:id' do
+  # update an existing commitment
+  commitment = Commitment.new(params)
+  commitment.update
+  redirect to '/commitments'
+end
+
 get '/commitments/:id/delete' do
   commitment = Commitment.find(params[:id])
   commitment.delete
