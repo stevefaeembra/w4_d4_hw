@@ -2,7 +2,7 @@
 <hr>
 <form action="/commitments/<%= @commitment.id %>" method="post">
   <label for="name">Name</label>
-  <input id="name" name="name" type="text" value="<%= @commitment.name%>"></input>
+  <input id="name" name="name" type="text" value="<%= @commitment.name%>" autofocus></input>
   <hr>
   <label for="account">Account</label>
   <select class="account" name="account_id">

@@ -2,7 +2,7 @@
 <hr>
 <form action="/accounts/<%= @account.id %>" method="post">
   <label for="name">Name</label>
-  <input id="name" name="name" type="text" placeholder="name of account" value="<%= @account.name %>"></input>
+  <input id="name" name="name" type="text" placeholder="name of account" value="<%= @account.name %>" autofocus></input>
   <hr>
   <input type="submit" value="Submit">
 </form>

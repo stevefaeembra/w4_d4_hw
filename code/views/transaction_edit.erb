@@ -2,7 +2,7 @@
 <hr>
 <form action="/transactions/<%= @transaction.id %>" method="post">
   <label for="notes">Notes</label>
-  <input id="notes" name="notes" type="text" value="<%= @transaction.notes %>"></input>
+  <input id="notes" name="notes" type="text" value="<%= @transaction.notes %>" autofocus></input>
   <hr>
   <label for="amount">Amount, in £</label>
   <input id="amount" name="amount" type="text" value="<%= @transaction.amount %>"></input>

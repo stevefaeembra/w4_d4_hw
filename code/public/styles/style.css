@@ -199,6 +199,10 @@ img.icon {
 
 /* form elements */
 
+input::placeholder {
+  color: rgba(255,0,0,.35);
+}
+
 input, label {
   font-size: 8vw;
   margin: 0 0.5rem;
@@ -206,6 +210,7 @@ input, label {
 }
 
 label {
+  font-family: 'Anton', sans-serif;
   font-weight: bolder;
   display: block;
   font-size: 8vw;
@@ -223,6 +228,7 @@ select {
 }
 
 input[type="text"] {
+  font-family: 'Raleway', sans-serif;
   font-size: 8vw;
   width: 90vw;
 }
