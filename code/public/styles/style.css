@@ -7,8 +7,43 @@
 }
 
 html {
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
-  background-color: wheat;
+  background-color: whitesmoke;
+}
+
+nav.header {
+  display: flex;
+  flex-direction: row;
+}
+
+a.add, a.close {
+  display: inline-flex;
+  flex: 5%;
+  text-decoration: none;
+  padding: 0.5rem;
+  color: white;
+  background-color: black;
+  font-weight: bolder;
+}
+
+.title {
+  display: inline-flex;
+  flex: 90%;
+  padding:0 10px;
+}
+
+
+h1 {
+  background-color: rgb(16, 193, 74);
+  font-size: 2rem;
+  height: 5rem;
+}
+
+h2 {
+  background-color: rgb(16, 193, 74);
+  font-size: 1.5rem;
+  display: inline-block;
 }
 
 table {
@@ -33,14 +68,15 @@ ul {
 }
 
 li {
+  border: 1px dotted black;
+  background-color: whitesmoke;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   padding: 0 .5rem;
 }
 
 .amount {
   text-align: right;
-  font-family: monospace;
 }
 
 .style_I {
@@ -67,9 +103,7 @@ a.delete {
   font-weight: bold;
 }
 
-h2 {
-  display: inline-block;
-}
+
 
 img.icon {
   width: 24px;
