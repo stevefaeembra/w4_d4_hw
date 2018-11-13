@@ -254,6 +254,11 @@ input[type="number"] {
   width: 20%;
 }
 
+input[type="radio"] {
+  font-size: 12vw;
+  color: red;
+}
+
 input[type="submit"] {
   background-color: rgb(16, 193, 74);
   border-radius: .5rem;
