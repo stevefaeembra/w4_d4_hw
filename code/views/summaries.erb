@@ -3,28 +3,29 @@
   <h2 class="title">Monthly Summary</h2>
   <a class="close" href="/"></a>
 </nav>
-<table>
-  <thead>
-    <th>Date</th>
-    <th>Type</th>
-    <th>Name/Notes</th>
-    <th>Vendor</th>
-    <th>Amount</th>
-    <th></th>
-  </thead>
-  <tbody>
+<div class="table">
+  <div class="thead">
+    <div class="th">Date</div>
+    <div class="th">Type</div>
+    <div class="th40">Name/Notes</div>
+    <div class="th20">Vendor</div>
+    <div class="th">Amount</div>
+    <div class="th"></div>
+  </div>
+  <div class="tbody">
     <% @summaries.each do |summary| %>
-      <tr class="style_<%= summary.foo  %>">
-        <td><%= summary.day_in_month %></td>
-        <td><%= summary.foo %></td>
-        <td><a href="/edit_router/<%= summary.id %>/<%= summary.foo %>"><%= summary.name %></a></td>
-        <td><%= summary.vendor.capitalize if summary.vendor %></td>
-        <td class="amount"><%= "%.2f" % summary.amount %></td>
-        <td><a class="delete" href="/delete_router/<%= summary.id %>/<%= summary.foo %>"><img class="icon" src="/images/throw-to-paper-bin.svg" ></i></a></td>
-      </tr>
+      <div class="tr style_<%= summary.foo  %>">
+        <div class="td"><%= summary.day_in_month %></div>
+        <div class="td"><%= summary.foo %></div>
+        <div class="td40"><a href="/edit_router/<%= summary.id %>/<%= summary.foo %>"><%= summary.name %></a></div>
+        <div class="td20"><%= summary.vendor.capitalize if summary.vendor %></div>
+        <div class="td amount"><%= "%.2f" % summary.amount %></td></div>
+        <div class="td"><a class="delete" href="/delete_router/<%= summary.id %>/<%= summary.foo %>"><img class="icon" src="/images/throw-to-paper-bin.svg" ></i></a></div>
+      </div>
+    </div>
     <% end %>
-  </tbody>
-  <tfoot>
+  </div>
+  <div class="tfoot">
 
-  </tfoot>
-</table>
+  </div>
+</div>
