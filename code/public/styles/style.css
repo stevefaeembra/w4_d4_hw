@@ -33,6 +33,15 @@ a.add, a.close {
   padding:0 10px;
 }
 
+a {
+  font-size: 6vw;
+}
+
+nav li a {
+  font-size: 8vw;
+  text-decoration: none;
+}
+
 h1, h2 {
   padding: .5rem;
 }
@@ -127,6 +136,7 @@ img.icon {
   flex-direction: row;
   flex-wrap: nowrap;
   margin: 1px 0;
+  font-size: 4vw;
 }
 
 .th,.th90,.th80,.th70,.th60,.th50,.th40,.th30,.th20 {
