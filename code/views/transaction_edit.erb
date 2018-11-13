@@ -4,8 +4,8 @@
   <label for="notes">Notes</label>
   <input id="notes" name="notes" type="text" value="<%= @transaction.notes %>"></input>
   <hr>
-  <label for="amount">Amount</label>
-  £<input id="amount" name="amount" type="text" value="<%= @transaction.amount %>"></input>
+  <label for="amount">Amount, in £</label>
+  <input id="amount" name="amount" type="text" value="<%= @transaction.amount %>"></input>
   <hr>
   <hr>
   <label for="vendor">Vendor</label>
@@ -28,7 +28,7 @@
   </select>
   <hr>
   <label for="day">Date</label>
-  <input id="day" type="number" name="day_in_month" value="<%= @transaction.day_in_month %>" min="1" max="31">/ <input id="month" type="number" name="month" value="<%= @transaction.month %>" min="1" max="12"> / <input id="year" type="number" name="year" value="<%= @transaction.year %>" min="2018" max="2020">
+  <input id="day" type="number" name="day_in_month" value="<%= @transaction.day_in_month %>" min="1" max="31">/<input id="month" type="number" name="month" value="<%= @transaction.month %>" min="1" max="12">/<input id="year" type="number" name="year" value="<%= @transaction.year %>" min="2018" max="2020">
   <hr>
   <input type="submit" value="Submit">
 </form>

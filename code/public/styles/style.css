@@ -40,14 +40,14 @@ h1, h2 {
 h1 {
   font-family: 'Anton', sans-serif;
   background-color: rgb(16, 193, 74);
-  font-size: 2rem;
-  height: 5rem;
+  font-size: 10vw;
+  height: 20vw;
 }
 
 h2 {
   font-family: 'Anton', sans-serif;
   background-color: rgb(16, 193, 74);
-  font-size: 1.5rem;
+  font-size: 8vw;
   display: inline-block;
 }
 
@@ -113,18 +113,6 @@ img.icon {
   height: 24px;
 }
 
-/**
-we reveal the menu
-by sliding the content down
-*/
-
-/* content {
-  background-color: whitesmoke;
-  position: absolute;
-  top: 5rem;
-  z-index: 100;
-} */
-
 /** flex container for vertical list. based on HTML tables but implemented using CSS Flex layout. Based on a grid of 10% by default **/
 
 .table, .tbody, .tfoot {
@@ -137,7 +125,7 @@ by sliding the content down
   border: 3px solid black;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 1px 0;
 }
 
@@ -197,4 +185,45 @@ by sliding the content down
   padding: .5rem .25rem;
   text-align: left;
   flex: 20%;
+}
+
+/* form elements */
+
+input, label {
+  font-size: 8vw;
+  margin: 0 0.5rem;
+  padding: 4vw 0;
+}
+
+label {
+  font-weight: bolder;
+  display: block;
+  font-size: 8vw;
+}
+
+hr {
+  padding-left: .5rem;
+  margin: .5rem 0;
+}
+
+select {
+  margin-left: .5rem;
+  font-size: 9vw;
+  width: 90vw;
+}
+
+input[type="text"] {
+  font-size: 8vw;
+  width: 90vw;
+}
+
+input[type="number"] {
+  font-size: 8vw;
+  width: 20%;
+}
+
+input[type="submit"] {
+  background-color: rgb(16, 193, 74);
+  border-radius: .5rem;
+  padding: .5rem;
 }
