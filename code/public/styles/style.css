@@ -264,3 +264,13 @@ input[type="submit"] {
   border-radius: .5rem;
   padding: .5rem;
 }
+
+/* this is the menu bit */
+
+#close {
+  display: none;
+}
+
+#close:checked ~ nav {
+  display: none;
+}
