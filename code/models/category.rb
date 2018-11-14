@@ -29,6 +29,12 @@ class Category
     return SqlRunner.get(sql, params, Category)
   end
 
+  def self.find_by_name(name)
+    sql = 'SELECT * from categories WHERE name=$1;'
+    params=[name]
+    return SqlRunner.get(sql, params, Category)
+  end
+
   def update
     sql = "UPDATE categories SET name = $1 WHERE id=$2 RETURNING *;"
     params = [@name,@id]

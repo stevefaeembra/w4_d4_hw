@@ -1,4 +1,6 @@
 require_relative('../db/sql_runner')
+require_relative('category')
+require('pry')
 
 class Classification
 
@@ -30,8 +32,36 @@ class Classification
     return SqlRunner.get(sql, params, Classification)
   end
 
-  # @TODO add method to get classifications
-  # for a given transaction id or to get transactions for a given category id
+  def self.register(xaction_id, taglist)
+    # given a list of words,
+    # add any newly coined names
+    # to category table. also link
+    # transaction to all categories
+    # binding.pry
+    p "In self.register"
+    sql='
+      select "name" from categories;
+    '
+    values = SqlRunner.all(sql,[],Category)
+    values = values.map {|x| x.name}
+    taglist.each do |tag|
+      if !values.member? tag
+        p "Create new tag #{tag}"
+        category = Category.new({"name" => tag})
+        category.save
+        # create classification
+        tag_id = category.id
+        classification = Classification.new({
+            "transactions_id" => xaction_id,
+            "categories_id" => tag_id
+        })
+        classification.save
+      else
+        # we already have a classification so do nothing
+        p "ignore existing tag #{tag}"
+      end
+    end
+  end
 
   def update
     sql = 'UPDATE classifications SET (transactions_id,categories_id)= ($2,$3) WHERE id=$1 RETURNING *;'

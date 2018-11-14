@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all')
 require('date')
 require_relative('../models/transaction')
+require_relative('../models/classification')
 require_relative('../models/vendor')
 require_relative('../models/account')
 also_reload('../models/*')
@@ -23,9 +24,14 @@ get '/transactions/new' do
 end
 
 post '/transactions' do
-  # create and save a new Transaction
+  # create and save a new Transaction, create/delete classifications
   xaction = Transaction.new(params)
   xaction.save
+
+  # add tags as required
+  category_names = params["categories"].split(" ")
+  Classification.register(xaction.id,category_names)
+
   redirect to '/summary'
 end
 
@@ -43,6 +49,11 @@ post '/transactions/:id' do
   # update an existing transaction
   transaction = Transaction.new(params)
   transaction.update
+
+  # handle categories
+  category_names = params["categories"].split(" ")
+  Classification.register(transaction.id,category_names)
+
   redirect to '/summary'
 end
 

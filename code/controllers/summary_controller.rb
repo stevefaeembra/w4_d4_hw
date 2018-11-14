@@ -8,7 +8,6 @@ get '/summary' do
   # all transactions, incomes and commitments for a given month
   @summaries = Summary.all()
   @total = Summary.total()
-  p @summaries
   erb(:summaries)
 end
 
