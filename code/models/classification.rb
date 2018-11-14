@@ -32,13 +32,22 @@ class Classification
     return SqlRunner.get(sql, params, Classification)
   end
 
+  def self.exists?(xaction_id,category_id)
+    # return true or false depending
+    # on whether a classification already exists
+    sql = 'select count(*) as ct from classifications where transactions_id = $1 and categories_id = $2'
+    params = [xaction_id, category_id]
+    result = SqlRunner.run(sql, params).first['ct'].to_i
+    # binding.pry
+    return result==1
+  end
+
   def self.register(xaction_id, taglist)
     # given a list of words,
     # add any newly coined names
     # to category table. also link
     # transaction to all categories
     # binding.pry
-    p "In self.register"
     sql='
       select "name" from categories;
     '
@@ -57,8 +66,20 @@ class Classification
         })
         classification.save
       else
-        # we already have a classification so do nothing
-        p "ignore existing tag #{tag}"
+        # we already have a classification so check to see if it exists, if so do nothing.
+        category = Category.find_by_name(tag)
+        tag_id = category.id
+        exists = Classification.exists?(xaction_id, tag_id)
+        if !exists
+          classification = Classification.new({
+              "transactions_id" => xaction_id,
+              "categories_id" => tag_id
+          })
+          classification.save
+          p "Added new classification"
+        else
+          p "ignore existing tag #{tag}"
+        end
       end
     end
   end
