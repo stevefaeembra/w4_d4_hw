@@ -34,6 +34,8 @@ get '/transactions/:id/edit' do
   @vendors = Vendor.all
   @accounts = Account.all
   @transaction = Transaction.find(params[:id])
+  @tags = @transaction.get_tags
+  @tag_names = @transaction.get_tag_names
   erb(:transaction_edit)
 end
 

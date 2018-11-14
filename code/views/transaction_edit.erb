@@ -30,5 +30,8 @@
   <label for="day">Date</label>
   <input id="day" type="number" name="day_in_month" value="<%= @transaction.day_in_month %>" min="1" max="31">/<input id="month" type="number" name="month" value="<%= @transaction.month %>" min="1" max="12">/<input id="year" type="number" name="year" value="<%= @transaction.year %>" min="2018" max="2020">
   <hr>
+  <label for="amount">Categories</label>
+  <input id="categories" name="categories" type="text" value="<%= @tag_names %>"></input>
+  <hr>
   <input type="submit" value="Submit">
 </form>
