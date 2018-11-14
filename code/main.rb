@@ -14,5 +14,5 @@ require_relative('./models/summary')
 
 get '/' do
   @summaries = Summary.all
-  erb( :summaries )
+  erb( :splash )
 end

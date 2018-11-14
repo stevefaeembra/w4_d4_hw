@@ -274,3 +274,10 @@ input[type="submit"] {
 #close:checked ~ nav {
   display: none;
 }
+
+/* animation */
+
+img.animation {
+  width: 100vw;
+  height: auto;
+}
