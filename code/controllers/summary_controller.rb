@@ -7,6 +7,7 @@ get '/summary' do
   # summaries view, this interleaves
   # all transactions, incomes and commitments for a given month
   @summaries = Summary.all()
+  @total = Summary.total()
   p @summaries
   erb(:summaries)
 end

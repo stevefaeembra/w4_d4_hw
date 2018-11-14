@@ -103,4 +103,15 @@ class Summary
     return SqlRunner.all(sql,[],Summary)
   end
 
+  def self.total
+    # sum up the values
+    total = 0.0
+    awl = self.all
+    awl.reduce(0.00) do |sum, item|
+      total += item.amount if  item.foo == 'I'
+      total -= item.amount if item.foo != 'I'
+    end
+    total
+  end
+
 end

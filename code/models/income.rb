@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Income
 
-  attr_reader :id
+  attr_reader :id, :value
   attr_accessor :name, :account_id, :amount, :regular, :day_in_month
 
   def initialize(options)
@@ -10,6 +10,7 @@ class Income
     @name = options['name']
     @account_id = options['account_id'].to_i
     @amount = options['amount'].to_f
+    @value = amount
     @regular = options['regular']
     @day_in_month = options['day_in_month'].to_i
   end

@@ -3,7 +3,7 @@ require_relative('../db/sql_runner')
 
 class Transaction
 
-  attr_reader :id, :dmy
+  attr_reader :id, :dmy, :value
   attr_accessor :day_in_month, :month, :year, :notes, :amount, :account_id, :vendor_id
 
   def initialize(options)
@@ -16,6 +16,7 @@ class Transaction
     @account_id = options['account_id'].to_i
     @vendor_id = options['vendor_id'].to_i
     @amount = options['amount'].to_f
+    @value = -@amount
   end
 
   def save

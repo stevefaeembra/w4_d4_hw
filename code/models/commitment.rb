@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Commitment
 
-  attr_reader :id
+  attr_reader :id, :value
   attr_accessor :name, :account_id, :vendor_id, :amount, :day_in_month
 
   def initialize(options)
@@ -11,6 +11,7 @@ class Commitment
     @account_id = options['account_id'].to_i
     @vendor_id = options['vendor_id'].to_i
     @amount = options['amount'].to_f
+    @value = -@amount
     @day_in_month = options['day_in_month'].to_i
   end
 
